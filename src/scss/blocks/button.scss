@@ -1,0 +1,128 @@
+.button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid $button;
+  background-color: $button;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.3s ease;
+
+  &:hover,
+  &:focus {
+    opacity: 0.75;
+    transform: scale(0.9);  
+  }
+
+  &__text {
+    @extend %visually-hidden;
+  }
+
+  &--menu {
+    position: relative;
+    background-image: url(../img/menu.svg);
+    @include button(18px);
+
+    &::after {
+
+      @media (min-width: 768px) {
+      content: "";
+      width: 2px;
+      height: 32px;
+      background-color: $borderGrey;
+      border-radius: 1px;
+      position: absolute;
+      right: -22px;
+      top: 4px;
+      }
+    }
+
+    @media (min-width: 1366px) {
+      display: none;
+    }
+  }
+
+  &--call {
+    background-image: url(../img/contacts.svg);
+    @include button(18px);
+  }
+
+  &--feedback {
+    background-image: url(../img/chat.svg);
+    @include button(20px);
+  }
+
+  &--profile {
+    background-image: url(../img/profile.svg);
+    @include button(20px);
+  }
+
+  &--request {
+    position: relative;
+    background-image: url(../img/request.svg);
+    @include button(20px);
+
+    &::before {
+      content: "";
+      width: 2px;
+      height: 32px;
+      background-color: $borderGrey;
+      border-radius: 1px;
+      position: absolute;
+      left: -22px;
+      top: 4px;
+
+      @media (min-width: 1366px) {
+        display: none;
+      }
+    }
+  }
+
+  &--repair-status {
+    background-image: url(../img/repair-status.svg);
+    @include button(16px);
+  }
+
+  &--next {
+    background-image: url(../img/arrow.svg);
+    background-color: $white;
+    @include button(7.5px 12px);
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 0 5px $button inset;
+      opacity: 1;
+    }
+  }
+
+  &--close {
+    background-image: url(../img/close.svg);
+    @include button(16px);
+
+    @media (min-width: 1366px) {
+      display: none;
+    }
+  }
+
+  &--search {
+    background-image: url(../img/search.svg);
+    @include button(17px);
+  }
+
+  &--arrow {
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/arrow-white.svg);
+    @include button(7px 9.63px);
+    right: 11px;
+    bottom: 4px;
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+      background-image: url(../img/arrow.svg);
+      opacity: 1;
+    }
+  }
+}

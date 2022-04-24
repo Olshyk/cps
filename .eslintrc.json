@@ -1,0 +1,28 @@
+{
+  "extends": [ 
+    "eslint:recommended",
+    "prettier"
+], 
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "no-console": 0,
+    "indent": ["warning", 2],
+    "prettier/prettier": "error"
+  },
+  "parser": "babel-eslint", // Парсер для обработки jsx кода
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 11, // версия стандарта JavaScript. Последний 12 (2021).
+        "sourceType": "module" // Позволяет использовать import/export
+    },
+    // Здесь мы подключаем используемые плагины.
+    "plugins": [
+        "prettier"
+    ]
+}

@@ -1,0 +1,25 @@
+@import '../../node_modules/swiper/swiper-bundle.css';
+
+@import '/common/normalize';
+@import '/common/fonts';
+@import '/common/variables';
+@import '/common/mixins';
+@import '/common/extends';
+@import '/common/common';
+
+@import '/blocks/swiper';
+@import '/blocks/header';
+@import '/blocks/navigation';
+@import '/blocks/button';
+@import '/blocks/main';
+@import '/blocks/tabs';
+@import '/blocks/about';
+@import '/blocks/link';
+@import '/blocks/info';
+@import '/blocks/overlay';
+@import '/blocks/sidebar';
+@import '/blocks/langList';
+@import '/blocks/card';
+@import '/blocks/footer';
+@import '/blocks/modal';
+@import '/blocks/form';

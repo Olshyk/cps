@@ -1,0 +1,23 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  max-width: 1600px;
+  font-family: "TT Lakes", sans-serif;
+  background-color: $bgColor;
+  color: $text;
+  margin: 0 auto;
+}
+
+

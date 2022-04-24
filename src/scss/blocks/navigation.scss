@@ -1,0 +1,78 @@
+.navigation {
+  @include flex-between(center);
+
+  &__button {
+    margin-right: 16px;
+  }
+
+  &__logo {
+    line-height: 0;
+    margin-right: auto;
+
+    @media (min-width: 768px) {
+      margin-left: 26px;
+    }
+
+    @media (min-width: 1366px) {
+      display: none;
+    }
+  }
+
+  &__list {
+    @include flex-between(center);
+    margin: 0;
+    list-style-type: none;
+  }
+
+  &__list--user {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: flex;
+      padding-right: 2px;
+    }
+
+    @media (min-width: 1366px) {
+      display: none;
+    }
+  }
+
+  &__list--last {
+
+    @media (min-width: 1366px) {
+      margin-left: auto;
+      margin-top: 42px;
+      z-index: 2;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+    &:first-child {
+      margin-right: 16px;
+    }
+  }
+  
+  &__link {
+    display: block;
+    text-decoration: none;
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  &__text {
+    display: none;
+    text-decoration: none;
+    @include text(500);
+    text-align: right;
+    color: $text;
+    padding: 0 9px 0 16px;
+
+    @media (min-width: 1366px) {
+      display: block;
+    }
+  }
+}
