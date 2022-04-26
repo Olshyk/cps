@@ -12,6 +12,7 @@
     border: 1px solid $borderGrey;
     border-radius: 8px;
     cursor: pointer;
+    outline: none;
 
    
     &:hover {
@@ -19,11 +20,11 @@
     }
     
     &:valid {
-      outline: 1px solid $active;
+      border-color: $active;
     }
 
     &:invalid:focus {
-      outline: 1px solid $button;
+      border-color: $button;
     }
 
     &::placeholder {
@@ -39,6 +40,7 @@
     border: 1px solid $borderGrey;
     border-radius: 8px;
     cursor: pointer;
+    outline: none;
 
     &:hover {
       background-color: $bgColor;
@@ -46,11 +48,11 @@
 
     &:invalid:focus {
       background-color: $white;
-      outline: 1px solid $button;
+      border-color: $button;
     }
 
     &:focus {
-      outline: 1px solid $bulletActive;
+      border-color: $bulletActive;
       background-color: $white;
     }
     
@@ -73,29 +75,29 @@
 
   &__button {
     display: block;
-      position: relative;
-      width: 136px;
-      height: 32px;
-      border-radius: 16px;
-      color: $white;
-      font-size: 12px;
-      line-height: 23px;
-      letter-spacing: -0.15px;
-      font-weight: 500;
-      text-transform: uppercase;
-      text-align: left;
-      padding: 4px 20px;
-      margin-left: auto;
+    position: relative;
+    width: 136px;
+    height: 32px;
+    border-radius: 16px;
+    color: $white;
+    font-size: 12px;
+    line-height: 23px;
+    letter-spacing: -0.15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 4px 20px;
+    margin-left: auto;
 
-      &:hover,
-      &:focus {
-        opacity: 1;
-        
-        .button--arrow {
-          background-color: $white;
-          background-image: url(../img/arrow.svg);
-          opacity: 1;  
-        }
+    &:hover,
+    &:focus {
+      opacity: 1;
+      
+      .button--arrow {
+        background-color: $white;
+        background-image: url(../img/arrow.svg);
+        opacity: 1;  
       }
     }
   }
+}  
