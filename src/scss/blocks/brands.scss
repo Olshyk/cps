@@ -1,0 +1,42 @@
+.brands {
+  
+  &__title {
+    @extend %title;
+  }
+
+  &__list {
+    @extend %list;
+
+    &--full {
+      height: auto;
+    }
+  }
+
+  &__item {
+    @extend %item;
+  }
+
+  &__button {
+    @include flex-between(center);
+    @extend %card;
+    height: 72px;
+    
+    &:hover,
+    &:focus {
+      
+      .button--next {
+      box-shadow: 0 0 0 5px $button inset;
+      transform: scale(0.9);
+      }
+    }
+  }
+
+  &__link {
+    @extend %link;
+
+    &--hide::before {
+      transform: scaleY(-1) translateY(-12px);
+    }
+  }
+}
+

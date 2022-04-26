@@ -12,31 +12,8 @@
     color: $text2;
   }
 
-  &--price {
-    display: inline-block;
-    position: relative;
-    text-decoration: none;
-    width: 195px;
-
-    @media (min-width: 768px) {
-      width: auto;
-    }
-
-    &:after {
-      display: inline-block;
-      content: url("../img/arrow.svg");
-      line-height: 0;
-      width: 6px;
-      height: 100%;
-      right: 40%;
-      bottom: -70%;
-      position: absolute;
-
-      @media (min-width: 768px) {
-        right: -5%;
-        bottom: -49%;
-      }
-    }
+  &--hide::before {
+    transform: scaleY(-1) translateY(-12px);
   }
 }
 
