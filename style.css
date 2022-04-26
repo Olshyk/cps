@@ -1,5 +1,5 @@
 /**
- * Swiper 8.1.1
+ * Swiper 8.1.4
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: April 15, 2022
+ * Released on: April 24, 2022
  */
 
 @font-face {
@@ -478,7 +478,8 @@ button.swiper-pagination-bullet {
   border-radius: 50%;
   border-top-color: transparent;
 }
-.swiper-slide-visible .swiper-lazy-preloader {
+.swiper:not(.swiper-watch-progress) .swiper-lazy-preloader,
+.swiper-watch-progress .swiper-slide-visible .swiper-lazy-preloader {
   animation: swiper-preloader-spin 1s infinite linear;
 }
 .swiper-lazy-preloader-white {
@@ -702,7 +703,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */ }
 
 /**
@@ -1343,10 +1345,7 @@ body {
     width: auto;
     height: 40px;
     padding: 6px 20px 8px 20px; }
-    .tabs__item:hover, .tabs__item:focus {
-      border: 2px solid #B8FFEC;
-      border-radius: 6px; }
-    .tabs__item:active, .tabs__item--active {
+    .tabs__item:hover, .tabs__item:focus, .tabs__item:active {
       border: 2px solid #B8FFEC;
       border-radius: 6px;
       background-color: #ffffff; }
