@@ -1,8 +1,15 @@
 function moreInfo() {
-  const infoLink = document.querySelectorAll('.info__link');
+  const brandsLink = document.querySelector('.brands__link');
+  const servicesLink = document.querySelector('.services__link');
   const aboutLink = document.querySelector('.about__link');
-  const infoList = document.querySelectorAll('.info__list');
+  const brandsList = document.querySelector('.brands__list');
+  const servicesList = document.querySelector('.services__list');
   const aboutText = document.querySelector('.about__text');
+
+  const brandsLinkClass = 'brands__link--hide';
+  const servicesLinkClass = 'services__link--hide';
+  const brandsListClass = 'brands__list--full';
+  const servicesListClass = 'services__list--full';
 
   function readMore() {
     aboutLink.addEventListener('click', () => {
@@ -13,16 +20,16 @@ function moreInfo() {
   }
   readMore();
 
-  function showMore(link, info) {
+  function showMore(link, info, linkClass, listClass) {
     link.addEventListener('click', () => {
-      link.classList.toggle('info__link--hide');
+      link.classList.toggle(linkClass);
       link.textContent = link.textContent === 'Показать все' ? 'Скрыть' : 'Показать все';
-      info.classList.toggle('info__list--full');
+      info.classList.toggle(listClass);
     });
   }
-  for (let i = 0; i < infoLink.length; i++) {
-    showMore(infoLink[i], infoList[i]);
-  }
+
+  showMore(brandsLink, brandsList, brandsLinkClass, brandsListClass);
+  showMore(servicesLink, servicesList, servicesLinkClass, servicesListClass);
 }
 
 export default moreInfo;

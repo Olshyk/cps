@@ -24,7 +24,11 @@
    }
   
   &::after {
-    @extend %shadow;
+    content: "";
+    position: absolute;
+    width: 24px;
+    background-image: linear-gradient(270deg, $bgColor 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    right: 0;
     height: 40px;
   }
 

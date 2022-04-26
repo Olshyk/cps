@@ -1,0 +1,26 @@
+.services {
+
+  &__title {
+  @extend %title;
+  }
+
+  &__list {
+    @extend %list;
+
+    &--full {
+      height: auto;
+    }
+  }
+
+  &__item{
+    @extend %item;
+  }
+
+  &__link {
+    @extend %link;
+
+    &--hide::before {
+      transform: scaleY(-1) translateY(-12px);
+    }
+  }
+}
