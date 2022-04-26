@@ -40,13 +40,8 @@
     padding: 6px 20px 8px 20px;
 
     &:hover,
-    &:focus {
-      border: 2px solid $active;
-      border-radius: 6px;
-    }
-
-    &:active,
-    &--active {
+    &:focus,
+    &:active {
       border: 2px solid $active;
       border-radius: 6px;
       background-color: $white;
@@ -56,6 +51,5 @@
   &__title {
     text-decoration: none;
     color: $text2;
-    background-color: $white;
   }
 }
