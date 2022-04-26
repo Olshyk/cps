@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .modal {
   visibility: hidden;
   position: fixed;
@@ -62,3 +63,69 @@
   }
 }
 
+=======
+.modal {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: $white;
+  height: 100vh;
+  z-index: 11;
+  padding: 24px 5%;
+  transition: transform 0.3s ease 0s, opacity 0.2s ease 0s;
+  transform: scale(0.9);
+  opacity: 0;
+  overflow: auto;
+  -ms-overflow-style: none;  
+  scrollbar-width: none;
+
+  @media (min-width: 768px) {
+    width: 440px;
+    box-shadow: -16px 0px 52px -16px $shadow;
+    padding: 32px 3.12%;
+    margin-right: 0;
+    transform: translateX(100%);
+  }
+
+  @media (min-width: 1366px) {
+    padding: 32px 2.34%;
+  }
+
+  &::-webkit-scrollbar {
+    display: none; 
+   }
+
+  &__button {
+    display: inline-block;
+
+    @media (min-width: 768px) {
+      position: relative;
+      left: -104px;
+    }
+  }
+
+  &__title {
+    @include title;
+    margin-top: 40px;
+    margin-bottom: 24px;
+
+    @media (min-width: 768px) {
+      margin-top: -32px;
+     }
+    
+    &::before {
+      @include highlight(40px);
+      transform: translateY(-6px)
+    }
+  }
+
+  &--open {
+    visibility: visible;
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+>>>>>>> 74e54fbfad583de77e2613c93a128cdb4debd661

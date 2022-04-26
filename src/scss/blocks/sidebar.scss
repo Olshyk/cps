@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .sidebar {
   visibility: hidden; 
   position: fixed;
@@ -134,3 +135,141 @@
     opacity: 1; 
    }
 }
+=======
+.sidebar {
+  visibility: hidden; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: $white;
+  height: 100%;
+  z-index: 11;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+  transform: translateX(-100%);
+  opacity: 0;
+  overflow: auto;
+  -ms-overflow-style: none;  
+  scrollbar-width: none;
+
+  @media (min-width: 768px) {
+    width: 320px;
+    margin-right: auto;
+    box-shadow: 16px 0px 52px -16px $shadow;
+  }
+
+  @media (min-width: 1366px) {
+    visibility: visible;
+    left: auto;
+    margin-right: 0;
+    box-shadow: none;
+    z-index:  initial;
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  &::-webkit-scrollbar {
+    display: none; 
+   }
+
+  &__container {
+    padding: 0 16px 32px 16px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @media (min-width: 360px) {
+      padding: 0 24px 32px 24px;
+    }
+  }
+
+  &__header {
+    padding-top: 18.59px;
+    padding-bottom: 18.59px;
+
+    @media (min-width: 1366px) {
+      padding-top: 30px;
+    }
+  }
+
+  &__logo {
+    line-height: 0;
+    margin-right: auto;
+  }
+
+  &__nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 7px;
+
+    @media (min-width: 768px) {
+      margin-top: 3vh;
+    }
+  }
+
+  &__nav-link {
+    display: block;
+    @include text(500);
+    text-decoration: none;
+    color: $text;
+    margin-bottom: 3.3vh;
+
+    &:active,
+    &:hover,
+    &:focus,
+    &--active {
+      color: $text2;
+
+      &::before {
+        @include highlight(32px);
+        transform: translateY(-5px);
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+  }
+
+  &__email {
+    display: block;
+    @include text(500);
+    color: $text;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $text2;
+    }
+  }
+
+  &__tel {
+    display: block;
+    @include title;
+    color: $text;
+    text-decoration: none;
+    padding-top: 12px;
+
+    &:hover,
+    &:focus {
+      color: $text2;
+    }
+  }
+
+  .navigation__list--user {
+    display: flex;
+    padding: 0;
+    margin: 0 auto 16px 0;
+  }
+
+  &--active {
+    visibility: visible;
+    transform: translateX(0);
+    opacity: 1; 
+   }
+}
+>>>>>>> 74e54fbfad583de77e2613c93a128cdb4debd661
