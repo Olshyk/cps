@@ -1,0 +1,124 @@
+.form {
+
+  &__label {
+  @extend %visually-hidden;
+  }
+
+  &__input {
+    width: 100%;
+    height: 48px;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    border: 1px solid $borderGrey;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+
+   
+    &:hover {
+      background-color: $bgColor;
+    }
+
+    &:focus {
+      border-color: $bulletActive;
+    }
+    
+    &:valid {
+      border-color: $active;
+    }
+
+    &:invalid:focus {
+      border-color: $button;
+    }
+
+    &::placeholder {
+      @include text(500);
+      color: $bulletActive;
+    }
+  }
+
+  &__message {
+    width: 100%;
+    height: 118px;
+    padding: 12px 16px;
+    border: 1px solid $borderGrey;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+      background-color: $bgColor;
+    }
+
+    &:invalid:focus {
+      background-color: $white;
+      border-color: $button;
+    }
+
+    &:focus {
+      border-color: $bulletActive;
+      background-color: $white;
+    }
+    
+    &::placeholder {
+      @include text(500);
+      color: $bulletActive;
+    }
+  }
+
+  &__text {
+    @include textSm(1);
+    font-weight: 500;
+    margin-bottom: 23px;
+
+    &--important {
+      color: $button;
+      font-weight: 500;
+    }
+  }
+
+  &__button {
+    display: block;
+    position: relative;
+    width: 136px;
+    height: 32px;
+    border-radius: 16px;
+    color: $white;
+    font-size: 12px;
+    line-height: 23px;
+    letter-spacing: -0.15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 4px 20px;
+    margin-left: auto;
+
+    &::after {
+      content: "";
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid $button;
+      background-color: $button;
+      transition: opacity 0.2s ease, transform 0.3s ease;
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background-image: url(../assets/img/arrow-white.svg);
+      @include button(7px 9.63px);
+      right: 11px;   
+      top: 3px;  
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+      
+      &::after {
+        background-color: $white;
+        background-image: url(../assets/img/arrow.svg);
+        opacity: 1;  
+      }
+    }
+  }
+}  

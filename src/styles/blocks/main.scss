@@ -1,0 +1,32 @@
+.main {
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 5%;
+    padding-bottom: 50px;
+
+    @media (min-width: 768px) {
+      padding-left: 3.12%;
+    }
+
+    @media (min-width: 1366px) {
+      padding-left: 2.34%;
+      margin-left: 320px;
+    }
+  }
+
+  &__title {
+    max-width: 600px;
+    @include title;
+    color: $text;
+    margin: 24px 0;
+
+    &::before {
+      @include highlight(40px);
+      top: 20px;
+    }
+  }
+}

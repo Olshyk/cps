@@ -1,0 +1,43 @@
+@mixin flex-between ($align) {
+  display: flex;
+  justify-content: space-between;
+  align-items: $align;
+}
+
+@mixin text ($fontWeight) {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: $fontWeight;
+  letter-spacing: -0.2px;
+}
+
+@mixin textSm($opacity) {
+  font-size: 14px;
+  line-height: 16px;
+  color: $text2;
+  opacity: $opacity;
+}
+
+@mixin title {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+}
+
+@mixin button($size) {
+  background-size: $size;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin highlight($height) {
+  content: "";
+  width: 4px;
+  height: $height;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  position: absolute;
+  left: 0;
+  background-color: $arrowsBlue;
+}

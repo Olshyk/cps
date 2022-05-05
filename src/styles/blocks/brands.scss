@@ -21,8 +21,7 @@
     @extend %card;
     height: 72px;
     
-    &:hover,
-    &:focus {
+    &:hover {
       
       .button--next {
       box-shadow: 0 0 0 5px $button inset;
