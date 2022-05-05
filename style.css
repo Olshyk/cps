@@ -948,7 +948,7 @@ template {
   font-weight: 700;
   src: url(./fonts/TTLakes-Bold.eot) format("embedded-opentype"), url(./fonts/TTLakes-Bold.woff) format("woff"), url(./fonts/TTLakes-Bold.ttf) format("truetype"); }
 
-.button__text, .about__title, .form__label {
+.about__title, .form__label {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1259,21 +1259,6 @@ body {
     background-size: 17px;
     background-repeat: no-repeat;
     background-position: center; }
-  .button--arrow {
-    position: absolute;
-    display: block;
-    width: 24px;
-    height: 24px;
-    background-image: url(./static/arrow-white.svg);
-    background-size: 7px 9.63px;
-    background-repeat: no-repeat;
-    background-position: center;
-    right: 11px;
-    bottom: 4px; }
-    .button--arrow:hover, .button--arrow:focus {
-      background-color: #ffffff;
-      background-image: url(./static/arrow.svg);
-      opacity: 1; }
 
 .main__container {
   position: relative;
@@ -1444,7 +1429,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 72px; }
-  .brands__button:hover .button--next, .brands__button:focus .button--next {
+  .brands__button:hover .button--next {
     box-shadow: 0 0 0 5px #FF3E79 inset;
     transform: scale(0.9); }
 
@@ -1721,9 +1706,26 @@ body {
       text-transform: uppercase;
       text-align: left;
       padding: 4px 12px; }
+      .card__button--long::after {
+        content: "";
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid #FF3E79;
+        background-color: #FF3E79;
+        transition: opacity 0.2s ease, transform 0.3s ease;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background-image: url(./static/arrow-white.svg);
+        background-size: 7px 9.63px;
+        background-repeat: no-repeat;
+        background-position: center;
+        right: 11px;
+        top: 2px; }
       .card__button--long:hover, .card__button--long:focus {
         opacity: 1; }
-        .card__button--long:hover .button--arrow, .card__button--long:focus .button--arrow {
+        .card__button--long:hover::after, .card__button--long:focus::after {
           background-color: #ffffff;
           background-image: url(./static/arrow.svg);
           opacity: 1; }
@@ -1854,7 +1856,8 @@ body {
       box-shadow: -16px 0px 52px -16px rgba(14, 24, 80, 0.2);
       padding: 32px 3.12%;
       margin-right: 0;
-      transform: translateX(100%); } }
+      transform: translateX(100%);
+      overflow: visible; } }
   @media (min-width: 1366px) {
     .modal {
       padding: 32px 2.34%; } }
@@ -1902,6 +1905,8 @@ body {
   outline: none; }
   .form__input:hover {
     background-color: #f8f8f8; }
+  .form__input:focus {
+    border-color: #B5B6BC; }
   .form__input:valid {
     border-color: #B8FFEC; }
   .form__input:invalid:focus {
@@ -1986,9 +1991,26 @@ body {
   text-align: left;
   padding: 4px 20px;
   margin-left: auto; }
+  .form__button::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #FF3E79;
+    background-color: #FF3E79;
+    transition: opacity 0.2s ease, transform 0.3s ease;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-image: url(./static/arrow-white.svg);
+    background-size: 7px 9.63px;
+    background-repeat: no-repeat;
+    background-position: center;
+    right: 11px;
+    top: 3px; }
   .form__button:hover, .form__button:focus {
     opacity: 1; }
-    .form__button:hover .button--arrow, .form__button:focus .button--arrow {
+    .form__button:hover::after, .form__button:focus::after {
       background-color: #ffffff;
       background-image: url(./static/arrow.svg);
       opacity: 1; }
